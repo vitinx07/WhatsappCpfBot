@@ -1,0 +1,21 @@
+modules = ["python-3.11", "web", "nodejs-20", "postgresql-16"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["openssl", "postgresql"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[workflows]
+runButton = "Run Bot"
+
+[[workflows.workflow]]
+name = "Run Bot"
+author = 44413180
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"

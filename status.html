@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Consignado - Status</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">
+                    <i class="fab fa-whatsapp text-success"></i>
+                    Bot Consignado - Status
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Processamento</h5>
+                        <p class="text-success">
+                            <i class="fas fa-check-circle"></i> Funcionando
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-id-card fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Validação CPF</h5>
+                        <p class="text-success">
+                            <i class="fas fa-check-circle"></i> Ativo
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fab fa-whatsapp fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Z-API</h5>
+                        <p class="text-warning">
+                            <i class="fas fa-exclamation-triangle"></i> Modo Simulação
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="fas fa-info-circle"></i> Funcionalidades Testadas</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-success">✅ Funcionando</h6>
+                                <ul class="list-unstyled ms-3">
+                                    <li><i class="fas fa-check text-success"></i> Recepção de mensagens</li>
+                                    <li><i class="fas fa-check text-success"></i> Reconhecimento de saudações</li>
+                                    <li><i class="fas fa-check text-success"></i> Validação de CPF</li>
+                                    <li><i class="fas fa-check text-success"></i> Comandos de ajuda</li>
+                                    <li><i class="fas fa-check text-success"></i> Formatação de respostas</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-warning">⚠️ Pendente</h6>
+                                <ul class="list-unstyled ms-3">
+                                    <li><i class="fas fa-clock text-warning"></i> Credenciais Z-API válidas</li>
+                                    <li><i class="fas fa-clock text-warning"></i> Envio real de mensagens</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="fas fa-cogs"></i> Comandos Suportados</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded">
+                                    <strong>Saudações</strong>
+                                    <p class="small text-muted mb-0">oi, olá, bom dia, boa tarde, boa noite</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded">
+                                    <strong>CPF</strong>
+                                    <p class="small text-muted mb-0">11 dígitos com validação</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded">
+                                    <strong>Ajuda</strong>
+                                    <p class="small text-muted mb-0">ajuda, help, menu, comandos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="text-muted">
+                    <i class="fas fa-clock"></i> 
+                    Sistema atualizado em {{ timestamp }}
+                </p>
+                <a href="/" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Voltar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Atualizar timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date().toLocaleString('pt-BR');
+            document.querySelector('p.text-muted').innerHTML = 
+                '<i class="fas fa-clock"></i> Sistema atualizado em ' + now;
+        });
+    </script>
+</body>
+</html>
